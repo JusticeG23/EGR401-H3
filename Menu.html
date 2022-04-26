@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <script src="https://kit.fontawesome.com/bf5d735fbc.js" crossorigin="anonymous"></script>
+    <script src="Menu.js" defer></script>
+    <link href="index.html" rel="import">
+  </head>
+  <body>
+    <audio id ="audio" autoplay loop><source src="./Audio/Main_Screen_Mix.mp3"/></audio>
+    </body>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+          <title>Game Menu</title>
+          <link href="Menu.css" rel="stylesheet">
+      <div class = "background">
+        <div class = "background2">
+       <div id ="menu">
+         <h1>Christian PvP Video Game</h1>
+         <h2>Main Menu</h2>
+       <div id = "menu_list">
+         <div id = "menuitem1" onclick ="newgameoption()"><div>Obstacle Course level</div></div>
+         <i class="fa">&#xf124;</i>
+         <div id = "menuitem2" onclick ="newgameoption2()"><div>Harpoon level</div></div>
+         <i class="fa">&#xf124;</i>
+         <div id = "menuitem3" onclick ="aboutlevels()"><div>About</div></a></div>
+         <i class="fa">&#xf124;</i>
+         <div id = "menuitem4" onclick ="options()"><div>Options</div></a></div>
+         <i class="fa">&#xf124;</i>
+        </div>
+        </div>
+      </div>
+      </div>
+    
+        <div id ="newgame">
+          <h3>Start a new game?</h3>
+          <div id ="newgameoption" onclick = "window.location.replace('ObstacleCourse.html');"><div>New Game</div></div>
+          <div id ="continueoption" onclick = "newgameoption()"><div>Continue Game</div></div>
+        </div>
+
+        <div id ="newgame2">
+          <h3>Start a new game?</h3>
+          <div id ="newgameoption2" onclick="window.location.replace('Harpoon.html');"><div>New Game</div></div>
+          <div id ="continueoption2" onclick = "newgameoption2();"><div>Continue Game</div></div>
+        </div>
+
+       <h4>About Levels</h4>
+       <div id = "about">
+         <ul>
+           <li>The Obstacle Course level is an adventurous level where the <br> player goes through different segments. This includes a wall 
+            <br>jump climb, running on a narrow road containing 6 large swinging <br> hammers, and running through a hill with falling objects.</li>
+           <br>
+           <br>
+           <li>The Harpoon level is a thrilling level where the 4 players stand <br> in a boat and throws harpoons at fish in the water. The regular <br>
+            fish are positive points, where the red fish are negative <br> points.</li>
+        </ul>
+     </div>
+
+     <h5>Options</h5>
+     <div id = "options">
+      <div id = "screenbrightness">Screen Brightness:</div>
+       <input id = "screenslider" type = "range" min = "50" max = "100" value = "75" onfocus="brightnesslevel()">
+
+      <div id = "musiconoff">Turn music on or off:</div>
+      <div>
+      <label for = "musiconoption">On
+      <input  type = "radio" id = "musiconoption" name = "music" checked = "checked">
+      </label>
+      </div>
+
+     <div>
+      <label for = "musicoffoption">Off
+      <input type = "radio" id = "musicoffoption" name = "music">
+      </label>
+      </div>
+    </div>
+     <div id = "return" onclick= "returnmenu()"><div>Return to Main Menu</div></div>
+</html>

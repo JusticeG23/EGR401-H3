@@ -1,0 +1,324 @@
+h1, h2 > menu {
+    font-family:"Courier New";
+    text-align: center;
+}
+
+h3 {
+    font: bold 25pt "Courier New";
+    color: white;
+    display: none;
+    position: fixed;
+    left: 300px;
+    top: 100px;
+}
+
+h4 {
+    font: bold 25pt "Courier New";
+    color: white;
+    display: none;
+    position: fixed;
+    left: 500px;
+    top: 100px;
+}
+
+h5 {
+    font: bold 30pt "Courier New";
+    color: black;
+    display: none;
+    position: fixed;
+    right: 590px;
+    top: 80px;
+}
+
+h6 {
+    font: bold 30pt "Courier New";
+    color: white;
+    display: none;
+    position: fixed;
+    left: 700px;
+    top: 80px;
+}
+
+.blur{
+    filter: blur(15px);
+    /* animation: blur 0.5s linear forwards; */
+}
+
+.enable {
+    pointer-events: all;
+}
+
+.disable {
+    pointer-events: none;
+}
+
+.fa{
+    animation: move_icon 0.5s linear infinite;
+    text-shadow: 4px gray;
+    color: rgb(13, 13, 41);
+    font-size: 20px;
+    transform: rotate(45deg);
+    position: relative;
+    right: 450px;
+    top: 60px;
+    display: none;
+}
+
+#menu{
+    background-image: url("https://media.distractify.com/brand-img/xqb9p2mK_/0x0/breath-of-the-wild2-1612472100817.jpg");
+    animation: change_pic 30s linear 0.5s infinite;
+    font: bold 20pt "Courier New";
+    text-align: center;
+    color: white;
+    padding-left: 50px;
+    padding-bottom: 620px;
+    margin: 0px 170px;
+    height: 100px;
+}
+
+#menu > div{
+    position: fixed;
+    width: 400px;
+    height: 150px;
+}
+
+@keyframes change_pic {
+   0% { background-image: url("https://media.distractify.com/brand-img/xqb9p2mK_/0x0/breath-of-the-wild2-1612472100817.jpg");}
+   50% {background-image: url("http://cdn2.expertreviews.co.uk/sites/expertreviews/files/2017/03/the_legend_of_zelda_breath_of_the_wild_review_1.jpg");}
+   100% { background-image: url("https://media.distractify.com/brand-img/xqb9p2mK_/0x0/breath-of-the-wild2-1612472100817.jpg");}
+}
+
+@keyframes move_icon {
+    0% {left: -50px;}
+    50% {right: 390px;}
+    100% {left: -50px;}
+}
+
+@keyframes change_color {
+    0% {background-color: rgb(206, 206, 78);}
+    50% {border: 1.5px solid rgb(243, 251, 255); background-color: rgb(119, 136, 78); box-shadow: 0px 0px 18px;}
+    100% {background-color: rgb(206, 206, 78);}
+}
+
+@keyframes return {
+    0% {color: rgb(119, 136, 78);}
+    50% {color: white;}
+    100% {color: rgb(119, 136, 78);}
+}
+
+@keyframes fade {
+    0% {opacity: 1;}
+    50% {filter: blur(15px);}
+    100% {filter: blur(15px);}
+}
+
+#menu_list {
+    display: grid;
+    grid-gap: 20px;
+    bottom: 210px;
+    height: 350px;
+}
+
+#menuitem1, #menuitem2, #menuitem3, #menuitem4 {
+    border: 2px solid black;
+    background-color: gray;
+}
+
+#menuitem1:hover, #menuitem2:hover, #menuitem3:hover, #menuitem4:hover {
+    animation: change_color 0.9s infinite;
+    cursor: pointer;
+}
+
+#menuitem1:hover + .fa{
+    position: absolute;
+    display: block;
+    left: -450px;
+    top: 8px; 
+}
+
+#menuitem2:hover + .fa{
+    position: absolute;
+    display: block;
+    left: -450px;
+    top: 60px;
+}
+
+#menuitem3:hover + .fa{
+    position: absolute;
+    display: block;
+    left: -450px;
+    top: 115px;
+}
+
+#menuitem4:hover + .fa{
+    position: absolute;
+    display: block;
+    left: -450px;
+    top: 170px;
+}
+
+#menuitem1:active, #menuitem2:active, #menuitem3:active, #menuitem4:active{
+    background: radial-gradient(rgb(235, 234, 234), rgb(226, 216, 216)); 
+}
+
+#newgame{
+    position: fixed;
+    display: grid;
+    grid-gap: 30px;
+    top: 250px;
+    left: 650px;
+    height: 10px;
+    width: 295px;
+    font: bold 22pt "Courier New";
+    color: white;
+    text-align: center;
+    z-index: 2;
+    pointer-events: all;
+}
+
+#newgameoption, #continueoption {
+    display: none;
+    border: solid 2px black;
+    background-color: gray;
+}
+
+#newgameoption:hover, #continueoption:hover{
+    cursor: pointer;
+    animation: change_color 0.9s infinite;
+}
+
+#newgameoption:active, #continueoption:active{
+    background: radial-gradient(rgb(235, 234, 234), rgb(226, 216, 216)); 
+}
+
+#difficultychoice {
+    font: bold 25pt "Courier New";
+    position: fixed;
+    display: grid;
+    grid-gap: 25px;
+    top: 200px;
+    height: 70px;
+    width: 300px;
+    right: 600px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    pointer-events: all;
+}
+
+#difficulty_item1, #difficulty_item2, #difficulty_item3 {
+    display: none;
+    border: 2px solid black;
+    background-color: gray;
+}
+
+#difficulty_item1:hover, #difficulty_item2:hover, #difficulty_item3:hover {
+    cursor: pointer;
+    animation: change_color 0.9s infinite;
+}
+
+#difficulty_item1:active, #difficulty_item2:active, #difficulty_item3:active {
+    background: radial-gradient(rgb(235, 234, 234), rgb(226, 216, 216)); 
+}
+
+#about {
+    font: bold 22pt "Courier New";
+    text-align: left;
+    color: rgb(34, 30, 30);
+    display: none;
+    position: fixed;
+    left: 200px;
+    top: 200px;
+}
+
+#options{
+    position: fixed;
+    display: grid;
+    grid-gap: 50px;
+    top: 250px;
+    left: 650px;
+    height: 200px;
+    width: 295px;
+    font: bold 22pt "Courier New";
+    color: white;
+    text-align: center;
+    pointer-events: all;
+}
+
+#screenbrightness {
+    font: bold 20pt "Courier New";
+    text-align: center;
+    color: white;
+    display: none;
+    position: fixed;
+}
+
+#musiconoff {
+    font: bold 20pt "Courier New"; 
+    text-align: center;
+    color: white;
+    display: none;
+    position: fixed;
+    right: 555px;
+    top: 350px;
+}
+
+#screenslider {
+    display: none;
+    position: relative;
+    top: 30px;
+}
+
+#screenslider:hover {
+    cursor: pointer;
+}
+
+input {
+    accent-color: blue;
+}
+
+#musiconoption {
+    cursor: pointer;
+}
+
+#musicoffoption {
+    cursor: pointer;
+}
+
+label[for = musiconoption] {
+    display: none;
+    font-size: 18pt;
+    text-align: left;
+    position: absolute;
+    left: 90px;
+    bottom: 10px;
+ } 
+
+label[for = musicoffoption] {
+    display: none;
+    font-size: 18pt;
+    text-align: left;
+    position: absolute;
+    right: 70px;
+    bottom: 10px;
+} 
+
+input[type = radio] {
+    display:none;
+    height: 25px;
+    width: 25px;
+}
+
+#return {
+    font: bold 25pt "Courier New";
+    text-align: center;
+    color: rgb(185, 216, 155);
+    position: fixed;
+    bottom: 50px;
+    right: 210px;
+    display: none;
+}
+
+#return:hover {
+    cursor: pointer;
+}

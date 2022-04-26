@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <script src="https://kit.fontawesome.com/bf5d735fbc.js" crossorigin="anonymous"></script>
+    <script src="Menu.js" defer></script>
+  </head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player | Building Blocks</title>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+          <title>Game Menu</title>
+          <link href="Menu.css" rel="stylesheet">
+      <div id = "background">
+       <div id ="menu">
+         <h1>Christian PvP Video Game</h1>
+         <h2>Main Menu</h2>
+       <div id = "menu_list">
+         <div id = "menuitem1" onclick ="newgameoption()"><div>Obstacle Course level</div></div>
+         <i class="fa">&#xf124;</i>
+         <div id = "menuitem2" onclick ="newgameoption()"><div>Harpoon level</div></div>
+         <i class="fa">&#xf124;</i>
+         <div id = "menuitem3" onclick ="aboutlevels()"><div>About</div></a></div>
+         <i class="fa">&#xf124;</i>
+         <div id = "menuitem4" onclick ="options()"><div>Options</div></a></div>
+         <i class="fa">&#xf124;</i>
+        </div>
+        </div>
+      </div>
+    
+        <h3>Would you like to start a new game or continue?</h3>
+        <div id ="newgame">
+          <div id ="newgameoption" onclick = "leveldifficulty()"><div>New Game</div></div>
+          <div id ="continueoption" onclick = "newgameoption()"><div>Continue Game</div></div>
+        </div>
+       
+        <h4>Choose level of difficulty:</h4>
+        <div id = "difficultychoice">
+          <div id = "difficulty_item1" onclick="window.open('index.html');">Easy</div>
+          <div id = "difficulty_item2">Medium</div>
+          <div id = "difficulty_item3">Hard</div>
+        </div>
+      
+       <h5>About Levels</h5>
+       <div id = "about">
+         <ul>
+           <li>The Obstacle Course level is an adventurous level where the <br> player goes through different segments. This includes a zig 
+            zag <br> climb, running on a narrow road containing 4 large swinging <br> hammers, and running through a fruit climb with falling fruits.</li>
+           <br>
+           <br>
+           <li>The Harpoon level is a thrilling level where the player stands <br> in a boat and throws harpoons at fish in the water. The regular <br>
+            fish are positive points, where the red fish are negative <br> points.</li>
+        </ul>
+     </div>
+
+     <h6>Options</h6>
+     <div id = "options">
+      <div id = "screenbrightness">Screen Brightness:</div>
+       <input id = "screenslider" type = "range" min = "50" max = "100" value = "75" onfocus="brightnesslevel()">
+
+      <div id = "musiconoff">Turn music on or off:</div>
+      <div>
+      <label for = "musiconoption">On
+      <input  type = "radio" id = "musiconoption" name = "music" checked = "checked">
+      </label>
+      </div>
+
+     <div>
+      <label for = "musicoffoption">Off
+      <input type = "radio" id = "musicoffoption" name = "music">
+      </label>
+      </div>
+    </div>
+
+     <div id = "return" onclick= "returnmenu()" onfocus="blurmenu()"><div>Return to Main Menu</div></div>
+</html>
