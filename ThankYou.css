@@ -1,4 +1,4 @@
-#background {
+.background {
     background-color: black;
     height: 100px;
     padding-left: 50px;
@@ -6,40 +6,33 @@
     margin: 0px 170px;
 }
 
+.styling {
+    color: white;
+    position: fixed;
+}
+
 h1 {
     font: bold 55pt "Courier New";
-    color: white;
     text-align: center;
-    position: fixed;
     top: -10px;
     animation: blurtext 5s alternate;
 }
 
 p {
     font: bold 25pt "Courier New";
-    color: white;
-    position: fixed;
     bottom: 90px;
     animation: blurtext 15s alternate;
 }
 
-#returnback {
+.returnback {
     font: bold 20pt "Courier New";
-    color: white;
-    position: fixed;
     bottom: 50px;
     right: 210px;
 }
 
-#returnback:hover {
+.returnback:hover {
     cursor: pointer;
 }
-
-@keyframes change_pic {
-    0% { background-image: url(Harpoonlevel.png);}
-    50% {background-image: url(ObstacleCourselevel.png);}
-    100% { background-image: url(Harpoonlevel.png);}
- }
 
  @keyframes blurtext {
      0% { opacity: 5%}
